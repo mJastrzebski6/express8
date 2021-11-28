@@ -41,8 +41,7 @@ app.get("/", function (req, res) {
   };
   res.render("index.hbs", context);
 });
-
-app.post("/", function (req, res) {
+app.post("/getFiles", function (req, res) {
   let form = formidable({});
   form.multiples = true;
   form.keepExtensions = true;
@@ -69,6 +68,9 @@ app.post("/", function (req, res) {
       else files["lol"].photo = "uknown";
     }
   });
+});
+
+app.post("/", function (req, res) {
   res.render("index.hbs");
 });
 

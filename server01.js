@@ -67,8 +67,8 @@ app.post("/getFiles", function (req, res) {
         files["lol"].photo = getExtension(files["lol"].name);
       else files["lol"].photo = "uknown";
     }
+    res.redirect("/");
   });
-  res.redirect("/");
 });
 
 app.post("/", function (req, res) {

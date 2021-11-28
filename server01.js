@@ -68,6 +68,7 @@ app.post("/getFiles", function (req, res) {
       else files["lol"].photo = "uknown";
     }
   });
+  res.redirect("/");
 });
 
 app.post("/", function (req, res) {

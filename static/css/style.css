@@ -1,0 +1,98 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+#navbar {
+  background-color: dodgerblue;
+  height: 10vh;
+  line-height: 10vh;
+  text-align: center;
+}
+#navbar > a {
+  color: white;
+  font-size: 30px;
+  margin-left: 20px;
+}
+.container {
+  height: 90vh;
+  display: flex;
+  align-items: stretch;
+}
+.sidebar {
+  flex: 1;
+  background-color: lightgray;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.sidebar > p {
+  padding-top: 30px;
+  font-size: 30px;
+}
+.content {
+  flex: 3;
+}
+
+.category {
+  text-decoration: underline;
+  color: blue;
+}
+
+.deleteFiles {
+  text-decoration: underline;
+  color: gray;
+  cursor: pointer;
+}
+
+tr,
+th {
+  display: flex;
+}
+th {
+  height: 40px;
+}
+th > td {
+  background-color: blue;
+}
+
+tr > td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+td {
+  flex: 1;
+}
+table {
+  width: 100%;
+}
+
+.infoData {
+  float: left;
+}
+.infoContent > p {
+  font-size: 30px;
+  padding: 30px 30px 0px 30px;
+}
+.uploadContent {
+  display: flex;
+  justify-content: center;
+}
+.uploadContent > form {
+  padding-top: 40px;
+}
+.filemanagerSidebar {
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.filemanagerButton {
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+}

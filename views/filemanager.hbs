@@ -1,0 +1,38 @@
+
+<div class="container">
+    <div class="sidebar filemanagerSidebar">
+        <p>filemanager</p><br />
+        <form method="get" action="/reset">
+            <button> Usuń dane o plikach w tabeli</button>
+        </form>
+    </div>
+    <div class="content">
+        <table>
+            <th class="tableHead">
+                <td>ID</td>
+                <td>OBRAZ</td>
+                <td>NAME</td>
+                <td>SIZE</td>
+                <td>TYPE</td>
+                <td>DELETE</td>
+                <td>INFO</td>
+                <td>DOWNLOAD</td>
+            </th>
+            {{#each files}}
+            <tr>
+                <td>{{this.id}}</td>
+                <td>
+                    <img src="./gfx/Ikonki/{{this.photo}}.jpg" class="fileIcon">
+                </td>
+                <td>{{this.name}}</td>
+                <td>{{this.size}}</td>
+                <td>{{this.type}}</td>
+                <td><form method="POST" action="/deleteOne"><input type="hidden" value="{{this.id}}" name="deleteId"><input type="submit" value="DELETE" class="filemanagerButton"></form></td>
+                <td><a href="/info/{{this.id}}" class="filemanagerButton">INFO</a></td>
+                <td><form method="POST" action="/download"><input type="hidden" value="{{this.id}}" name="downloadId"><input type="submit"
+                        value="DOWNLOAD" class="filemanagerButton"></form></td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+</div>
